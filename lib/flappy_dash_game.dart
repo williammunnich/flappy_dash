@@ -10,6 +10,8 @@ import 'package:flutter/services.dart';
 
 import 'audio_helper.dart';
 import 'component/flappy_dash_root_component.dart';
+import 'component/floor.dart';
+import 'component/ceiling.dart';
 
 class FlappyDashGame extends FlameGame<FlappyDashWorld>
     with KeyboardEvents, HasCollisionDetection {
@@ -57,6 +59,9 @@ class FlappyDashWorld extends World
         ],
       ),
     );
+    //floor and ceiling when crossed also end the game, same as pipe
+    add(Floor());
+    add(Ceiling());
   }
 
   void onSpaceDown() => _rootComponent.onSpaceDown();

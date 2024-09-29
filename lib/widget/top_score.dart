@@ -7,22 +7,20 @@ class TopScore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GameCubit, GameState>(
-      builder: (context, state) {
-        return Align(
-          alignment: Alignment.topCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 24.0),
-            child: Text(
-              state.currentScore.toString(),
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 38,
-              ),
+    return IgnorePointer(
+      child: BlocBuilder<GameCubit, GameState>(
+        builder: (context, state) {
+          return Text(
+            state.currentScore.toString(),
+            style: const TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 38,
+              letterSpacing: 4,
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

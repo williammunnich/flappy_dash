@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
+
 import 'widget/game_over_widget.dart';
 import 'widget/tap_to_play.dart';
 import 'widget/top_score.dart';
@@ -19,6 +21,9 @@ class MainPage extends StatefulWidget {
   @override
   State<MainPage> createState() => _MainPageState();
 }
+
+
+
 
 class _MainPageState extends State<MainPage> {
   late FlappyDashGame _flappyDashGame;
@@ -58,7 +63,11 @@ class _MainPageState extends State<MainPage> {
                   alignment: Alignment(0, 0.2),
                   child: TapToPlay(),
                 ),
-              if (state.currentPlayingState.isNotGameOver) const TopScore(),
+              if (state.currentPlayingState.isNotGameOver)
+                const Align(
+                alignment: Alignment(0, -.7),
+                child: TopScore(),
+                ),
             ],
           ),
         );

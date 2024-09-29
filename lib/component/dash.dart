@@ -6,6 +6,8 @@ import 'package:flame_bloc/flame_bloc.dart';
 import 'package:flappy_dash/bloc/game/game_cubit.dart';
 import 'package:flappy_dash/component/hidden_coin.dart';
 import 'package:flappy_dash/component/pipe.dart';
+import 'package:flappy_dash/component/floor.dart';
+import 'package:flappy_dash/component/ceiling.dart';
 import 'package:flappy_dash/flappy_dash_game.dart';
 
 class Dash extends PositionComponent
@@ -75,7 +77,7 @@ class Dash extends PositionComponent
     if (other is HiddenCoin) {
       bloc.increaseScore();
       other.removeFromParent();
-    } else if (other is Pipe) {
+    } else if (other is Pipe || other is Floor || other is Ceiling) {
       bloc.gameOver();
     }
   }
