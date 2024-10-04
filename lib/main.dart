@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         getIt.get<AudioHelper>(),
       ),
       child: MaterialApp(
-        title: 'Flappy Dash',
+        title: 'BirdTap',
         theme: ThemeData(fontFamily: 'Chewy'),
         home: const MainPage(),
       ),

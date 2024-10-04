@@ -65,7 +65,7 @@ class _MainPageState extends State<MainPage> {
                 ),
               if (state.currentPlayingState.isNotGameOver)
                 const Align(
-                alignment: Alignment(0, -.7),
+                alignment: Alignment(0, -.9),
                 child: TopScore(),
                 ),
             ],

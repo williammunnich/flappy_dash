@@ -20,7 +20,7 @@ class FlappyDashGame extends FlameGame<FlappyDashWorld>
           world: FlappyDashWorld(),
           camera: CameraComponent.withFixedResolution(
             width: 600,
-            height: 1000,
+            height: 1300,
           ),
         );
 
